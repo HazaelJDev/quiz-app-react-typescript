@@ -1,3 +1,147 @@
 /*Ant Design styles*/
 @import '~antd/dist/antd.css';
 
+.App{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.App__title{
+    align-self: center;
+    justify-self: center;
+    font-size: 400%;
+    font-weight: lighter;
+    animation: fluido 30s ease-in-out infinite;
+    -moz-animation: fluido 30s ease-in-out infinite;
+    background: radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.App__score{
+    align-self: flex-end;
+    justify-self: center;
+}
+
+.gridCard{
+    text-align: center;
+}
+
+.gridButton:hover{
+    cursor: pointer;
+}
+
+.gridButton{
+    width: 100% !important;
+    height: 100% !important;
+}
+.skeleton{
+    width: 100%;
+    height: 60vh;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.title {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 40%;
+}
+.title__score{
+    align-self: flex-end;
+    width: 100px !important;
+}
+
+.title__numberQuestion {
+    align-self: flex-start;
+    width: 100px !important;
+}
+
+.title__question {
+    display: flex;
+    width: 100%;
+    height: 60px !important;
+}
+
+
+.bodySkeleton{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+    padding: 32px;
+}
+
+.bodySkeleton__button{
+    width: 100% !important;
+    height: 80px !important;
+}
+
+.startContainer , .resultsContainer {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.gift{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gift__iframe{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.gift__credits{
+    width: 100%;
+    height: auto;
+    align-self: flex-start;
+    text-align: center;
+}
+
+
+/* Tamaños menores a 992 px */
+@media (max-width: 991.98px) {
+    .bodySkeleton{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    .gridCard{
+        width: 90% !important;
+    }
+}
+
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+}
